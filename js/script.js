@@ -63,26 +63,21 @@ function loopOverList(list){
 loopOverList(cats);
 
  //Question 8
-let nameList = document.querySelector(".cat-container");
-let catName = cats.name;
-let catAge = cats.age;
-function createCats(cats){
-    for( let i = 0; i < cats.length; i++){
-       if(catAge === Number){
-        nameList.innerHTML = `
-        <div>
-        <h5 >${catName}:</h5> <p>${catAge}</p>
-        </div>
-        `;
-       }else{
-        nameList.innerHTML = `
-        <div>
-        <h5 >${catName}:</h5> <p>"Age unknown"</p>
-        </div>
-        `;
-       }
+let catList = document.querySelector('.cat-container');
+function createCats(){
+    for(i = 0; i < cats.length; i++){
+        let catAge = "Unknown age";
+        if(!cats[i].age){
+            cats[i].age = catAge;
+        }
+        catList.innerHTML += `<div>
+        <h5>${cats[i].name}</h5>
+        <p>${cats[i].age}</p>
+        </div>`;
     }
-    return nameList.innerHTML;
+    return catList;
 }
 
-createCats(cats);
+ 
+createCats(cats)
+   
