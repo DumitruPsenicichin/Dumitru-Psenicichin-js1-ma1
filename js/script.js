@@ -24,7 +24,7 @@ cat.complain();
 
 //Question 2
 
-let heading = document.querySelector('h3');
+let heading = document.querySelector("h3");
 
 heading.innerHTML = "Updated heading";
 
@@ -63,7 +63,7 @@ function loopOverList(list){
 loopOverList(cats);
 
  //Question 8
-let catList = document.querySelector('.cat-container');
+let catList = document.querySelector(".cat-container");
 function createCats(){
     for(i = 0; i < cats.length; i++){
         let catAge = "Unknown age";
