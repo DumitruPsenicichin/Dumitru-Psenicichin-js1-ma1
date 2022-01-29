@@ -1,5 +1,4 @@
-const cats = [
-    {
+const cats = [{
         name: "Blob",
         age: 10
     },
@@ -16,7 +15,7 @@ const cats = [
 //Question 1
 
 let cat = {
-    complain: function (){
+    complain: function () {
         console.log("Meow!");
     }
 }
@@ -40,7 +39,7 @@ heading.classList.add("subheading");
 
 let paragraphs = document.querySelectorAll("p");
 
-for(let i = 0; i < paragraphs.length; i++){
+for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].style.color = "red";
 }
 
@@ -53,21 +52,23 @@ resultsContainer.style.color = "yellow";
 //Question 7
 
 let nameOfPet;
-function loopOverList(list){
- for(let i = 0; i < list.length; i++){
-     nameOfPet = list[i].name;
-     console.log(nameOfPet);
- }
+
+function loopOverList(list) {
+    for (let i = 0; i < list.length; i++) {
+        nameOfPet = list[i].name;
+        console.log(nameOfPet);
+    }
 }
 
 loopOverList(cats);
 
- //Question 8
+//Question 8
 let catList = document.querySelector(".cat-container");
-function createCats(){
-    for(i = 0; i < cats.length; i++){
+
+function createCats() {
+    for (i = 0; i < cats.length; i++) {
         let catAge = "Unknown age";
-        if(!cats[i].age){
+        if (!cats[i].age) {
             cats[i].age = catAge;
         }
         catList.innerHTML += `<div>
@@ -78,6 +79,5 @@ function createCats(){
     return catList;
 }
 
- 
-createCats(cats)
-   
+
+createCats(cats);
