@@ -72,10 +72,9 @@ function createCats() {
             cats[i].age = catAge;
         }
         catList.innerHTML += `<div>
-        <h5>${cats[i].name}:</h5> 
-        <p>${cats[i].age}</p>
+        <h5 style ="display: inline-block">${cats[i].name}:</h5>
+        <p style ="display: inline-block">${cats[i].age}</p>
         </div>`;
-         
     }
     return catList;
 }
