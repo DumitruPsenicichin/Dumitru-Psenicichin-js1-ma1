@@ -14,7 +14,7 @@ const cats = [{
 
 //Question 1
 
-let cat = {
+const cat = {
     complain: function () {
         console.log("Meow!");
     }
@@ -67,14 +67,15 @@ let catList = document.querySelector(".cat-container");
 
 function createCats() {
     for (i = 0; i < cats.length; i++) {
-        let catAge = "Unknown age";
+        let catAge = "Age unknown";
         if (!cats[i].age) {
             cats[i].age = catAge;
         }
         catList.innerHTML += `<div>
-        <h5>${cats[i].name}</h5>
+        <h5>${cats[i].name}:</h5> 
         <p>${cats[i].age}</p>
         </div>`;
+         
     }
     return catList;
 }
